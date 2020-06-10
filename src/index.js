@@ -1,10 +1,10 @@
 import $ from 'jquery';
-import api from './api';
-import store from './store';
 
 import 'normalize.css';
 import './index.css';
 
+import api from './api';
+import store from './store';
 import shoppingList from './shopping-list';
 
 const main = function () {
@@ -14,6 +14,7 @@ const main = function () {
       items.forEach((item) => store.addItem(item));
       shoppingList.render();
     });
+
   shoppingList.bindEventListeners();
   shoppingList.render();
 };
