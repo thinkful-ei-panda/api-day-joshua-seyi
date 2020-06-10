@@ -5,11 +5,10 @@ import './index.css';
 
 import shoppingList from './shopping-list';
 
-const main = function () {
-  fetch('https://thinkful-list-api.herokuapp.com/ei-student/items')
-    .then(res => res.json())
-    .then(data => console.log(data));
+import api from './api';
 
+const main = function () {
+  
   shoppingList.bindEventListeners();
   shoppingList.render();
 };
