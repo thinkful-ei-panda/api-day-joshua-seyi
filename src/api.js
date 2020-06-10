@@ -1,27 +1,27 @@
-const BASE_URL = 'https://thinkful-list-api.herokuapp.com/ei-student';
+const BASE_URL = 'https://thinkful-list-api.herokuapp.com/seyi-josh';
 
 const getItems = function () {
   return fetch(`${BASE_URL}/items`);
 };
 
-function createItem(input) {
-    let newItem = JSON.stringify({ input });
+function createItem(name) {
+  let newItem = JSON.stringify({ name });
 
-    JSON.stringify(newItem);
+  JSON.stringify(newItem);
 
-    return fetch(`${BASE_URL}/items`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: newItem,
+  return fetch(`${BASE_URL}/items`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: newItem,
 
-    });
+  });
 
 
 }
 
 export default {
-    getItems,
-    createItem
+  getItems,
+  createItem
 };
