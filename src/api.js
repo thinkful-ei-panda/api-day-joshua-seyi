@@ -1,11 +1,14 @@
-const BASE_URL = 'https://thinkful-list-api.herokuapp.com/ei-student';
+const BASE_URL = 'https://thinkful-list-api.herokuapp.com/joshuastruve';
 
 const getItems = function () {
   return fetch(`${BASE_URL}/items`);
 };
 
 function createItem(input) {
-    let newItem = JSON.stringify({ input });
+    let newItem = {
+        input
+        
+    };
 
     JSON.stringify(newItem);
 
