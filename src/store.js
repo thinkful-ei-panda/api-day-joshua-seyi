@@ -1,4 +1,3 @@
-import item from './item';
 
 const items = [];
 let hideCheckeditems = false;
@@ -11,7 +10,12 @@ const addItem = function (item) {
   this.items.push(item);
 };
 
-function findAndUp
+function findAndUpdate(id, newData) {
+  let updated = this.findById(id);
+
+  Object.assign(updated, newData);
+  
+}
 const findAndDelete = function (id) {
   this.items = this.items.filter(currentItem => currentItem.id !== id);
 };
@@ -26,5 +30,6 @@ export default {
   findById,
   addItem,
   findAndDelete,
-  toggleCheckedFilter
+  toggleCheckedFilter,
+  findAndUpdate
 };
