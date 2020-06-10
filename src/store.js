@@ -4,7 +4,7 @@ const items = [];
 let hideCheckeditems = false;
 
 const findById = function (id) {
-  return this.items.find(currentItem => currentItem.id === id);
+  return this.items.find(item => item.id === id);
 };
 
 const addItem = function (name) {
@@ -17,22 +17,22 @@ const addItem = function (name) {
 };
 
 const findAndToggleChecked = function (id) {
-  const currentItem = this.findById(id);
-  currentItem.checked = !currentItem.checked;
+  const item = this.findById(id);
+  item.checked = !item.checked;
 };
 
 const findAndUpdateName = function (id, name) {
   try {
     item.validateName(name);
-    const currentItem = this.findById(id);
-    currentItem.name = name;
+    const item = this.findById(id);
+    item.name = name;
   } catch (e) {
     console.log('Cannot update name: ' + e.message);
   }
 };
 
 const findAndDelete = function (id) {
-  this.items = this.items.filter(currentItem => currentItem.id !== id);
+  this.items = this.items.filter(item => item.id !== id);
 };
 
 const toggleCheckedFilter = function () {
